@@ -3,6 +3,7 @@ import java.util.*;
 public class Solution429 {
     /**
      * N叉树的层序遍历
+     * 利用队列，在左边添加，在右边消费，右边每消费一个节点，便将其的children-node添加到左边，考虑到读取的顺序，按children的顺序添加即可
      *
      * @param root 根节点
      * @return 遍历结果
