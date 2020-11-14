@@ -15,7 +15,6 @@ public class Solution429 {
         Queue<Node> queue = new LinkedList<>();
         List<List<Integer>> result = new LinkedList<>();
         queue.add(root);
-        result.add(Collections.singletonList(root.val));
         while (!queue.isEmpty()) {
             List<Integer> list = new LinkedList<>();
             // 每次清空当前queue中内容，及该层全部内容
