@@ -16,4 +16,16 @@ public class Solution70 {
         }
         return c;
     }
+
+    /**
+     * 爬楼梯，用斐波拉契数列通项公式求解
+     *
+     * @param n 台阶数
+     * @return 结果
+     */
+    public int climbStairs2(int n) {
+        double sqrt_5 = Math.sqrt(5);
+        double fib_n = Math.pow((1 + sqrt_5) / 2, n + 1) - Math.pow((1 - sqrt_5) / 2, n + 1);
+        return (int) (fib_n / sqrt_5);
+    }
 }
