@@ -1,6 +1,3 @@
-import java.util.Deque;
-import java.util.LinkedList;
-
 public class Solution236 {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         // 题目设定节点一定能在树中找到
