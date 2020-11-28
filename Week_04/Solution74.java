@@ -1,4 +1,24 @@
 public class Solution74 {
+    // 因为全部升序，可以吧二维矩阵看做一个超长数组，直接进行二分查找
+    public boolean searchMatrix2(int[][] matrix, int target) {
+        if (matrix == null || matrix.length == 0) {
+            return false;
+        }
+        int start = 0, rows = matrix.length, cols = matrix[0].length;
+        int end = rows * cols - 1;
+        while (start <= end) {
+            int mid = (start + end) / 2;
+            if (matrix[mid / cols][mid % cols] == target) {
+                return true;
+            }
+            if (matrix[mid / cols][mid % cols] < target) {
+                start = mid + 1;
+            } else {
+                end = mid - 1;
+            }
+        }
+        return false;
+    }
     // 因为从左到右升序，从上到下升序，所以可以用每行第一个元素做跳表，然后在每行中二分查找
     public boolean searchMatrix(int[][] matrix, int target) {
         if (matrix.length == 0) {
