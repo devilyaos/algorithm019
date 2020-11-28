@@ -1,3 +1,5 @@
+// 此处实现了DFS的实现，BFS实现其实大体的思路一致，只是将向下遍历，改为将每一个节点的周围一圈为E的节点放入队列
+// 此处没有对节点变化进行更进一步的封装，仅表达实现方式
 public class Solution529 {
     public char[][] updateBoard(char[][] board, int[] click) {
         char clickVal = board[click[0]][click[1]];
